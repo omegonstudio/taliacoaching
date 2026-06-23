@@ -10,7 +10,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { CALENDLY_URL } from "@/lib/site-config";
-import contactImage from "@/assets/acompanamiento-nueva.png.asset.json";
+import contactImage from "@/assets/acompanamento.png";
+
 
 export function Contact() {
   const [open, setOpen] = useState(false);
@@ -21,7 +22,7 @@ export function Contact() {
         <div className="grid items-stretch gap-0 overflow-hidden rounded-[2rem] border border-border bg-card shadow-[var(--shadow-soft)] lg:grid-cols-2">
           <div className="relative hidden bg-[#faf7f5] lg:block">
             <img
-              src={contactImage.url}
+              src={contactImage}
               alt="Talia Alles sonriendo y sosteniendo una manzana roja"
               width={960}
               height={1280}

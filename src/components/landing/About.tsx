@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { SocialIcons } from "./SocialIcons";
 import { WHATSAPP_URL } from "@/lib/site-config";
-import aboutImage from "@/assets/talia-eoooo.png.asset.json";
+import aboutImage from "@/assets/talia-apple.png";
 
 function WavyLine({ className = "" }: { className?: string }) {
   return (
@@ -30,7 +30,7 @@ export function About() {
             tomamos cada día.
           </blockquote>
           <img
-            src={aboutImage.url}
+            src={aboutImage}
             alt="Talia Alles, Health Coach, señalando hacia arriba"
             width={960}
             height={1280}

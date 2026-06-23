@@ -110,8 +110,7 @@ export function Coaching() {
           </p>
           <p className="mt-5 text-base leading-relaxed text-foreground/70">
             Trabajamos sobre los distintos pilares del bienestar porque la salud va mucho más allá de
-            la alimentación o el ejercicio. Tu energía, tus emociones, tus pensamientos, tus
-            relaciones, tus hábitos, tus valores y tu propósito están profundamente conectados.
+            la alimentación o el ejercicio.
           </p>
         </div>
 
