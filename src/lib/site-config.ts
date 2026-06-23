@@ -1,7 +1,7 @@
 // Enlaces externos de la marca. Reemplazá los placeholders cuando tengas los links finales.
 
 // Número de WhatsApp en formato internacional sin "+" ni espacios. Ej: 5491112345678
-export const WHATSAPP_NUMBER = "5491100000000";
+export const WHATSAPP_NUMBER = "5492914254659";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hola Talia, me gustaría comenzar mi proceso para construir hábitos sostenibles.",
 );
