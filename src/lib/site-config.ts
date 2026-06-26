@@ -7,7 +7,9 @@ const WHATSAPP_MESSAGE = encodeURIComponent(
 );
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
-// Enlace de pago de Mercado Pago para el eBook.
+/**
+ * @deprecated Usar `BuyEbookButton` y Checkout Pro (`startCheckout`). Se mantiene por compatibilidad.
+ */
 export const MERCADO_PAGO_URL = "{LINK_MERCADO_PAGO}";
 
 // Enlace de Calendly para agendar reuniones.

@@ -24,3 +24,32 @@ export function getServerConfig() {
     //   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
   };
 }
+
+function normalizeSiteUrl(url: string): string {
+  return url.replace(/\/$/, "");
+}
+
+/**
+ * URL pública del sitio (HTTPS en producción).
+ * Usada para armar las back_urls de Mercado Pago.
+ */
+export function getSiteUrl(): string | undefined {
+  const siteUrl = process.env.SITE_URL?.trim();
+  if (siteUrl) {
+    return normalizeSiteUrl(siteUrl);
+  }
+
+  const vercelUrl = process.env.VERCEL_URL?.trim();
+  if (vercelUrl) {
+    return normalizeSiteUrl(`https://${vercelUrl}`);
+  }
+
+  return undefined;
+}
+
+export function getMercadoPagoConfig() {
+  return {
+    accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN?.trim(),
+    siteUrl: getSiteUrl(),
+  };
+}

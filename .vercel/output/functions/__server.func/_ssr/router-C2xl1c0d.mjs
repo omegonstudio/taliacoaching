@@ -2,6 +2,7 @@ import { Q as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { Q as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { c as createRouter, a as createRootRouteWithContext, u as useRouter, L as Link, O as Outlet, H as HeadContent, S as Scripts, b as createFileRoute, l as lazyRouteComponent } from "../_libs/tanstack__react-router.mjs";
 import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
+import { o as objectType, s as stringType } from "../_libs/zod.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
 import "../_libs/cookie-es.mjs";
@@ -15,7 +16,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-BdJu26dr.css";
+const appCss = "/assets/styles-Bd7zpMPj.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -49,7 +50,7 @@ function NotFoundComponent() {
 }
 function ErrorComponent({ error, reset }) {
   console.error(error);
-  const router = useRouter();
+  const router2 = useRouter();
   reactExports.useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
@@ -61,7 +62,7 @@ function ErrorComponent({ error, reset }) {
         "button",
         {
           onClick: () => {
-            router.invalidate();
+            router2.invalidate();
             reset();
           },
           className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
@@ -79,7 +80,7 @@ function ErrorComponent({ error, reset }) {
     ] })
   ] }) });
 }
-const Route$2 = createRootRouteWithContext()({
+const Route$3 = createRootRouteWithContext()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -129,11 +130,11 @@ function RootShell({ children }) {
   ] });
 }
 function RootComponent() {
-  const { queryClient } = Route$2.useRouteContext();
+  const { queryClient } = Route$3.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
 const BASE_URL = "";
-const Route$1 = createFileRoute("/sitemap.xml")({
+const Route$2 = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
@@ -165,8 +166,8 @@ const Route$1 = createFileRoute("/sitemap.xml")({
     }
   }
 });
-const $$splitComponentImporter = () => import("./index-BuRcnlih.mjs");
-const Route = createFileRoute("/")({
+const $$splitComponentImporter$1 = () => import("./index-CVJuk6QZ.mjs");
+const Route$1 = createFileRoute("/")({
   head: () => ({
     meta: [{
       title: "Talia Alles · Hábitos saludables que podés sostener"
@@ -207,33 +208,62 @@ const Route = createFileRoute("/")({
       })
     }]
   }),
+  component: lazyRouteComponent($$splitComponentImporter$1, "component")
+});
+const $$splitComponentImporter = () => import("./resultado-BpBXrzRy.mjs");
+const resultadoSearchSchema = objectType({
+  collection_status: stringType().optional(),
+  payment_id: stringType().optional(),
+  external_reference: stringType().optional()
+});
+const Route = createFileRoute("/pago/resultado")({
+  validateSearch: (search) => resultadoSearchSchema.parse(search),
+  head: () => ({
+    meta: [{
+      title: "Resultado del pago · Talia Alles"
+    }, {
+      name: "robots",
+      content: "noindex"
+    }]
+  }),
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
-const SitemapDotxmlRoute = Route$1.update({
+const SitemapDotxmlRoute = Route$2.update({
   id: "/sitemap.xml",
   path: "/sitemap.xml",
-  getParentRoute: () => Route$2
+  getParentRoute: () => Route$3
 });
-const IndexRoute = Route.update({
+const IndexRoute = Route$1.update({
   id: "/",
   path: "/",
-  getParentRoute: () => Route$2
+  getParentRoute: () => Route$3
+});
+const PagoResultadoRoute = Route.update({
+  id: "/pago/resultado",
+  path: "/pago/resultado",
+  getParentRoute: () => Route$3
 });
 const rootRouteChildren = {
   IndexRoute,
-  SitemapDotxmlRoute
+  SitemapDotxmlRoute,
+  PagoResultadoRoute
 };
-const routeTree = Route$2._addFileChildren(rootRouteChildren)._addFileTypes();
+const routeTree = Route$3._addFileChildren(rootRouteChildren)._addFileTypes();
 const getRouter = () => {
   const queryClient = new QueryClient();
-  const router = createRouter({
+  const router2 = createRouter({
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0
   });
-  return router;
+  return router2;
 };
-export {
+const router = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
   getRouter
+}, Symbol.toStringTag, { value: "Module" }));
+export {
+  Route as R,
+  router as r
 };

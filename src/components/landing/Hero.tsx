@@ -1,5 +1,6 @@
+import BuyEbookButton from "@/components/landing/BuyEbookButton";
 import { Button } from "@/components/ui/button";
-import { MERCADO_PAGO_URL, WHATSAPP_URL } from "@/lib/site-config";
+import { WHATSAPP_URL } from "@/lib/site-config";
 import heroImage from "@/assets/hero.jpeg";
 
 export function Hero() {
@@ -26,9 +27,7 @@ export function Hero() {
             herramientas prácticas para construir cambios reales y duraderos en tu vida.
           </p>
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
-            <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-              <a href={MERCADO_PAGO_URL}>Quiero mi guía</a>
-            </Button>
+            <BuyEbookButton className="w-full sm:w-auto">Quiero mi guía</BuyEbookButton>
             <Button asChild variant="softline" size="xl" className="w-full sm:w-auto">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Comenzar mi proceso

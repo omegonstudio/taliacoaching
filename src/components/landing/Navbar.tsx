@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { MERCADO_PAGO_URL } from "@/lib/site-config";
+import BuyEbookButton from "@/components/landing/BuyEbookButton";
 
 const links = [
   { href: "#coaching", label: "Health Coaching" },
@@ -45,9 +44,7 @@ export function Navbar() {
             </a>
           ))}
         </div>
-        <Button asChild variant="hero" size="sm" className="h-9 px-5">
-          <a href={MERCADO_PAGO_URL}>Conseguí el eBook</a>
-        </Button>
+        <BuyEbookButton className="h-9 px-5">Conseguí el eBook</BuyEbookButton>
       </nav>
     </header>
   );

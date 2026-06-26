@@ -1,6 +1,5 @@
 import { Check, FileText } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { MERCADO_PAGO_URL } from "@/lib/site-config";
+import BuyEbookButton from "@/components/landing/BuyEbookButton";
 import ebookCover from "@/assets/ebook-cover.jpg";
 
 const benefits = [
@@ -78,9 +77,7 @@ export function Ebook() {
           </div>
 
           <div className="mt-8">
-            <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-              <a href={MERCADO_PAGO_URL}>Compralo ahora</a>
-            </Button>
+            <BuyEbookButton className="w-full sm:w-auto">Compralo ahora</BuyEbookButton>
           </div>
         </div>
       </div>

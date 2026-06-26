@@ -1,11 +1,31 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
-import { S as Slot } from "../_libs/radix-ui__react-slot.mjs";
-import { c as cva } from "../_libs/class-variance-authority.mjs";
-import { c as clsx } from "../_libs/clsx.mjs";
-import { t as twMerge } from "../_libs/tailwind-merge.mjs";
+import { B as Button, W as WHATSAPP_URL, C as CALENDLY_URL, c as cn, I as INSTAGRAM_URL, T as TIKTOK_URL } from "./site-config-DHJAUAPi.mjs";
+import { a as createServerFn, T as TSS_SERVER_FUNCTION, g as getServerFnById } from "./server-CG81b1Gu.mjs";
 import { D as Dialog$1, a as DialogTrigger$1, b as DialogPortal$1, c as DialogContent$1, d as DialogClose, e as DialogTitle$1, f as DialogDescription$1, g as DialogOverlay$1 } from "../_libs/radix-ui__react-dialog.mjs";
+import "../_libs/seroval.mjs";
 import { C as Compass, M as Mountain, S as Sprout, a as Sparkles, A as Apple, H as HeartPulse, b as ShieldCheck, L as Lightbulb, F as Flame, c as Scale, d as Check, e as FileText, f as CalendarDays, g as MessageCircle, I as Instagram, X } from "../_libs/lucide-react.mjs";
+import "../_libs/radix-ui__react-slot.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
+import "../_libs/class-variance-authority.mjs";
+import "../_libs/clsx.mjs";
+import "../_libs/tailwind-merge.mjs";
+import "node:async_hooks";
+import "../_libs/h3-v2.mjs";
+import "../_libs/rou3.mjs";
+import "../_libs/srvx.mjs";
+import "node:stream";
+import "../_libs/tanstack__router-core.mjs";
+import "../_libs/tanstack__history.mjs";
+import "../_libs/cookie-es.mjs";
+import "../_libs/seroval-plugins.mjs";
+import "node:stream/web";
+import "../_libs/tanstack__react-router.mjs";
+import "../_libs/react-dom.mjs";
+import "util";
+import "crypto";
+import "async_hooks";
+import "stream";
+import "../_libs/isbot.mjs";
 import "../_libs/radix-ui__primitive.mjs";
 import "../_libs/radix-ui__react-context.mjs";
 import "../_libs/radix-ui__react-id.mjs";
@@ -13,11 +33,6 @@ import "../_libs/@radix-ui/react-use-layout-effect+[...].mjs";
 import "../_libs/@radix-ui/react-use-controllable-state+[...].mjs";
 import "../_libs/@radix-ui/react-dismissable-layer+[...].mjs";
 import "../_libs/radix-ui__react-primitive.mjs";
-import "../_libs/react-dom.mjs";
-import "util";
-import "crypto";
-import "async_hooks";
-import "stream";
 import "../_libs/@radix-ui/react-use-callback-ref+[...].mjs";
 import "../_libs/@radix-ui/react-use-escape-keydown+[...].mjs";
 import "../_libs/radix-ui__react-focus-scope.mjs";
@@ -32,54 +47,52 @@ import "../_libs/get-nonce.mjs";
 import "../_libs/use-sidecar.mjs";
 import "../_libs/use-callback-ref.mjs";
 import "../_libs/aria-hidden.mjs";
-function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
-const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
-  {
-    variants: {
-      variant: {
-        default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-        outline: "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-[var(--terracotta)] text-[var(--cream)] shadow-[var(--shadow-soft)] hover:bg-[var(--terracotta-deep)] hover:-translate-y-0.5",
-        sage: "bg-[var(--primary)] text-[var(--primary-foreground)] shadow-[var(--shadow-soft)] hover:opacity-90 hover:-translate-y-0.5",
-        softline: "border border-[var(--terracotta)] text-[var(--terracotta-deep)] bg-transparent hover:bg-[var(--terracotta)] hover:text-[var(--cream)]"
-      },
-      size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
-        xl: "h-13 px-9 text-base"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
+var createSsrRpc = (functionId) => {
+  const url = "/_serverFn/" + functionId;
+  const serverFnMeta = { id: functionId };
+  const fn = async (...args) => {
+    return (await getServerFnById(functionId))(...args);
+  };
+  return Object.assign(fn, {
+    url,
+    serverFnMeta,
+    [TSS_SERVER_FUNCTION]: true
+  });
+};
+const startCheckout = createServerFn({
+  method: "POST"
+}).handler(createSsrRpc("76222c6845b6553cfdb09d8428a299bdd6cf1c7ddb323835c4ed1c1747765e2e"));
+function BuyEbookButton({ children, className }) {
+  const [loading, setLoading] = reactExports.useState(false);
+  const [error, setError] = reactExports.useState(null);
+  async function handleClick() {
+    setLoading(true);
+    setError(null);
+    try {
+      const { initPoint } = await startCheckout();
+      window.location.href = initPoint;
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "No pudimos iniciar el pago. Intentá de nuevo.";
+      setError(message);
+      setLoading(false);
     }
   }
-);
-const Button = reactExports.forwardRef(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Comp, { className: cn(buttonVariants({ variant, size, className })), ref, ...props });
-  }
-);
-Button.displayName = "Button";
-const WHATSAPP_NUMBER = "5492914254659";
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hola Talia, me gustaría comenzar mi proceso para construir hábitos sostenibles."
-);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
-const MERCADO_PAGO_URL = "{LINK_MERCADO_PAGO}";
-const CALENDLY_URL = "https://calendly.com/taliaalles";
-const INSTAGRAM_URL = "https://instagram.com/taliaalles";
-const TIKTOK_URL = "https://tiktok.com/@taliaalles";
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex flex-col items-stretch", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Button,
+      {
+        type: "button",
+        variant: "hero",
+        size: "xl",
+        className: cn(className),
+        disabled: loading,
+        onClick: handleClick,
+        children: loading ? "Procesando..." : children
+      }
+    ),
+    error ? /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-center text-xs text-destructive", children: error }) : null
+  ] });
+}
 const links = [
   { href: "#coaching", label: "Health Coaching" },
   { href: "#sobre-mi", label: "Quién soy" },
@@ -112,7 +125,7 @@ function Navbar() {
           },
           l.href
         )) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, variant: "hero", size: "sm", className: "h-9 px-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: MERCADO_PAGO_URL, children: "Conseguí el eBook" }) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(BuyEbookButton, { className: "h-9 px-5 text-xs", children: "Conseguí el eBook" })
       ] })
     }
   );
@@ -132,7 +145,7 @@ function Hero() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mx-auto mt-6 max-w-xl text-balance text-sm italic leading-relaxed text-foreground/70 lg:mx-0", children: "Soy Talia Alles, Health Coach. Te acompaño a transformar tus hábitos y tu bienestar desde la conciencia. En este eBook comparto las herramientas que me ayudaron a lograrlo." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mx-auto mt-6 max-w-xl text-balance text-lg leading-relaxed text-foreground/75 lg:mx-0", children: "Esta guía te ayudará a entender por qué te cuesta sostener hábitos y te brindará herramientas prácticas para construir cambios reales y duraderos en tu vida." }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-9 flex flex-col items-center gap-3 sm:flex-row lg:justify-start", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, variant: "hero", size: "xl", className: "w-full sm:w-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: MERCADO_PAGO_URL, children: "Quiero mi guía" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(BuyEbookButton, { className: "w-full sm:w-auto", children: "Quiero mi guía" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, variant: "softline", size: "xl", className: "w-full sm:w-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: WHATSAPP_URL, target: "_blank", rel: "noopener noreferrer", children: "Comenzar mi proceso" }) })
           ] })
         ] }),
@@ -424,7 +437,7 @@ function Ebook() {
               ]
             }
           ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, variant: "hero", size: "xl", className: "w-full sm:w-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: MERCADO_PAGO_URL, children: "Compralo ahora" }) }) })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx(BuyEbookButton, { className: "w-full sm:w-auto", children: "Compralo ahora" }) })
         ] })
       ] })
     }
