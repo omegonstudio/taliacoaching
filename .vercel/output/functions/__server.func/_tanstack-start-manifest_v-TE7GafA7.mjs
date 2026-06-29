@@ -1,0 +1,4 @@
+const tsrStartManifest = () => ({ routes: { __root__: { filePath: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx", children: ["/", "/sitemap.xml", "/pago/resultado"], preloads: ["/assets/index-BnPXQWm5.js"], scripts: [{ attrs: { type: "module", async: true, src: "/assets/index-BnPXQWm5.js" } }] }, "/": { filePath: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/index.tsx", children: void 0, preloads: ["/assets/index-CgQp9LRG.js", "/assets/createLucideIcon-CvvZymQm.js"] }, "/pago/resultado": { filePath: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/pago/resultado.tsx", children: void 0, preloads: ["/assets/resultado-wHF6ZVz6.js", "/assets/createLucideIcon-CvvZymQm.js"] } } });
+export {
+  tsrStartManifest
+};

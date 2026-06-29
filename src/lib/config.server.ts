@@ -49,7 +49,9 @@ export function getSiteUrl(): string | undefined {
 
 export function getMercadoPagoConfig() {
   return {
-    accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN?.trim(),
+    accessToken:
+      process.env.MERCADOPAGO_ACCESS_TOKEN?.trim() ??
+      process.env.MP_ACCESS_TOKEN?.trim(),
     siteUrl: getSiteUrl(),
   };
 }

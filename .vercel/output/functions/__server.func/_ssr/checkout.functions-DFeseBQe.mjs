@@ -1,5 +1,6 @@
-import { T as TSS_SERVER_FUNCTION, a as createServerFn } from "./server-CG81b1Gu.mjs";
-import process from "node:process";
+import { c as createServerRpc } from "./createServerRpc-XZhpJ-Iz.mjs";
+import { a as createServerFn } from "./server-dPCb_qXc.mjs";
+import { g as getMercadoPagoConfig, E as EBOOK_PRODUCT } from "./product-al1R68gy.mjs";
 import "../_libs/seroval.mjs";
 import "../_libs/react.mjs";
 import "node:async_hooks";
@@ -19,42 +20,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-var createServerRpc = (serverFnMeta, splitImportFn) => {
-  const url = "/_serverFn/" + serverFnMeta.id;
-  return Object.assign(splitImportFn, {
-    url,
-    serverFnMeta,
-    [TSS_SERVER_FUNCTION]: true
-  });
-};
-function normalizeSiteUrl(url) {
-  return url.replace(/\/$/, "");
-}
-function getSiteUrl() {
-  const siteUrl = process.env.SITE_URL?.trim();
-  if (siteUrl) {
-    return normalizeSiteUrl(siteUrl);
-  }
-  const vercelUrl = process.env.VERCEL_URL?.trim();
-  if (vercelUrl) {
-    return normalizeSiteUrl(`https://${vercelUrl}`);
-  }
-  return void 0;
-}
-function getMercadoPagoConfig() {
-  return {
-    accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN?.trim(),
-    siteUrl: getSiteUrl()
-  };
-}
-const EBOOK_PRODUCT = {
-  title: "Hábitos que se sostienen",
-  description: "eBook de Talia Alles · Guía práctica para construir hábitos sostenibles",
-  price: 15e3,
-  currency: "ARS",
-  quantity: 1,
-  externalReference: "ebook-habitos-que-se-sostienen"
-};
+import "node:process";
 class MercadoPagoConfigError extends Error {
   constructor(message) {
     super(message);

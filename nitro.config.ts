@@ -8,6 +8,13 @@ export default defineNitroConfig({
   // Override the default cloudflare preset from @lovable.dev/vite-tanstack-config
   preset: "vercel",
 
+  serverAssets: [
+    {
+      baseName: "ebook",
+      dir: resolve(__dirname, "private"),
+    },
+  ],
+
   // Output configuration for Vercel deployment
   outDir: resolve(__dirname, ".vercel/output"),
 

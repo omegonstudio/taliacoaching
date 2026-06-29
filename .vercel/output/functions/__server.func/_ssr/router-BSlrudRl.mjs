@@ -1,7 +1,8 @@
 import { Q as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { Q as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { c as createRouter, a as createRootRouteWithContext, u as useRouter, L as Link, O as Outlet, H as HeadContent, S as Scripts, b as createFileRoute, l as lazyRouteComponent } from "../_libs/tanstack__react-router.mjs";
-import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
+import { r as reactExports, c as jsxDevRuntimeExports } from "../_libs/react.mjs";
+import { v as verifyPayment } from "./verifyPayment.server-XVaWYr4R.mjs";
 import { o as objectType, s as stringType } from "../_libs/zod.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
@@ -16,7 +17,9 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-Bd7zpMPj.css";
+import "./product-al1R68gy.mjs";
+import "node:process";
+const appCss = "/assets/styles-DBTVTU7E.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -34,19 +37,51 @@ function reportLovableError(error, context = {}) {
   );
 }
 function NotFoundComponent() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-4 text-xl font-semibold text-foreground", children: "Page not found" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: "The page you're looking for doesn't exist or has been moved." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-md text-center", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("h1", { className: "text-7xl font-bold text-foreground", children: "404" }, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 19,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("h2", { className: "mt-4 text-xl font-semibold text-foreground", children: "Page not found" }, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 20,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "mt-2 text-sm text-muted-foreground", children: "The page you're looking for doesn't exist or has been moved." }, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 21,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mt-6", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
       Link,
       {
         to: "/",
         className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
         children: "Go home"
-      }
-    ) })
-  ] }) });
+      },
+      void 0,
+      false,
+      {
+        fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+        lineNumber: 25,
+        columnNumber: 11
+      },
+      this
+    ) }, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 24,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, true, {
+    fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+    lineNumber: 18,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+    lineNumber: 17,
+    columnNumber: 5
+  }, this);
 }
 function ErrorComponent({ error, reset }) {
   console.error(error);
@@ -54,11 +89,19 @@ function ErrorComponent({ error, reset }) {
   reactExports.useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-xl font-semibold tracking-tight text-foreground", children: "This page didn't load" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: "Something went wrong on our end. You can try refreshing or head back home." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 flex flex-wrap justify-center gap-2", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-md text-center", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("h1", { className: "text-xl font-semibold tracking-tight text-foreground", children: "This page didn't load" }, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 47,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "mt-2 text-sm text-muted-foreground", children: "Something went wrong on our end. You can try refreshing or head back home." }, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 50,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mt-6 flex flex-wrap justify-center gap-2", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "button",
         {
           onClick: () => {
@@ -67,18 +110,46 @@ function ErrorComponent({ error, reset }) {
           },
           className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
           children: "Try again"
-        }
+        },
+        void 0,
+        false,
+        {
+          fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+          lineNumber: 54,
+          columnNumber: 11
+        },
+        this
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "a",
         {
           href: "/",
           className: "inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent",
           children: "Go home"
-        }
+        },
+        void 0,
+        false,
+        {
+          fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+          lineNumber: 63,
+          columnNumber: 11
+        },
+        this
       )
-    ] })
-  ] }) });
+    ] }, void 0, true, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 53,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, true, {
+    fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+    lineNumber: 46,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+    lineNumber: 45,
+    columnNumber: 5
+  }, this);
 }
 const Route$3 = createRootRouteWithContext()({
   head: () => ({
@@ -121,17 +192,45 @@ const Route$3 = createRootRouteWithContext()({
   errorComponent: ErrorComponent
 });
 function RootShell({ children }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { lang: "en", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("head", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeadContent, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("body", { children: [
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("html", { lang: "en", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("head", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(HeadContent, {}, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 120,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 119,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("body", { children: [
       children,
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Scripts, {})
-    ] })
-  ] });
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Scripts, {}, void 0, false, {
+        fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+        lineNumber: 124,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+      lineNumber: 122,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+    lineNumber: 118,
+    columnNumber: 5
+  }, this);
 }
 function RootComponent() {
   const { queryClient } = Route$3.useRouteContext();
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Outlet, {}, void 0, false, {
+    fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+    lineNumber: 136,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "/home/titin/Documentos/omegon/00-OMEGON/00-proyectos/project-files/src/routes/__root.tsx",
+    lineNumber: 134,
+    columnNumber: 5
+  }, this);
 }
 const BASE_URL = "";
 const Route$2 = createFileRoute("/sitemap.xml")({
@@ -166,7 +265,7 @@ const Route$2 = createFileRoute("/sitemap.xml")({
     }
   }
 });
-const $$splitComponentImporter$1 = () => import("./index-CVJuk6QZ.mjs");
+const $$splitComponentImporter$1 = () => import("./index-C4Bqq0xs.mjs");
 const Route$1 = createFileRoute("/")({
   head: () => ({
     meta: [{
@@ -210,7 +309,7 @@ const Route$1 = createFileRoute("/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./resultado-BpBXrzRy.mjs");
+const $$splitComponentImporter = () => import("./resultado-XQ_8PolS.mjs");
 const resultadoSearchSchema = objectType({
   collection_status: stringType().optional(),
   payment_id: stringType().optional(),
@@ -218,6 +317,31 @@ const resultadoSearchSchema = objectType({
 });
 const Route = createFileRoute("/pago/resultado")({
   validateSearch: (search) => resultadoSearchSchema.parse(search),
+  loaderDeps: ({
+    search
+  }) => ({
+    payment_id: search.payment_id,
+    external_reference: search.external_reference
+  }),
+  loader: async ({
+    deps
+  }) => {
+    if (!deps.payment_id) {
+      return {
+        verified: {
+          status: "error",
+          reason: "missing_payment_id"
+        },
+        external_reference: deps.external_reference
+      };
+    }
+    const verified = await verifyPayment(deps.payment_id);
+    return {
+      verified,
+      payment_id: deps.payment_id,
+      external_reference: deps.external_reference
+    };
+  },
   head: () => ({
     meta: [{
       title: "Resultado del pago · Talia Alles"

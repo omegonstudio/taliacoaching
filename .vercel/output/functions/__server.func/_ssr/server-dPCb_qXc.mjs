@@ -81,7 +81,7 @@ function getResponse() {
 }
 var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 async function getStartManifest(matchedRoutes) {
-  const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-DsIvUypT.mjs");
+  const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-TE7GafA7.mjs");
   const startManifest = tsrStartManifest();
   let routes = startManifest.routes;
   routes[rootRouteId];
@@ -101,9 +101,13 @@ async function getStartManifest(matchedRoutes) {
   };
 }
 const manifest = {
+  "41f8edebbc59da9530c744bbfc82939c1125255bb923b4ad1e1ec8c10561faf0": {
+    functionName: "downloadEbook_createServerFn_handler",
+    importer: () => import("./downloadEbook.functions-BD7V1V1S.mjs")
+  },
   "76222c6845b6553cfdb09d8428a299bdd6cf1c7ddb323835c4ed1c1747765e2e": {
     functionName: "startCheckout_createServerFn_handler",
-    importer: () => import("./checkout.functions-gV3xZrzA.mjs")
+    importer: () => import("./checkout.functions-DFeseBQe.mjs")
   }
 };
 async function getServerFnById(id, access) {
@@ -1343,8 +1347,8 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
   const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-    import("./router-C2xl1c0d.mjs").then((n) => n.r),
-    import("./start-DzHhhqfM.mjs"),
+    import("./router-BSlrudRl.mjs").then((n) => n.r),
+    import("./start-CtcFEpBq.mjs"),
     import("./empty-plugin-adapters-BFgPZ6_d.mjs")
   ]);
   return {
