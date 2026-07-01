@@ -27,7 +27,7 @@ export function Contact() {
               width={960}
               height={1280}
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover object-top"
+              className="absolute inset-0 h-[440px] w-full object-cover object-top"
             />
           </div>
           <div className="p-9 sm:p-12">

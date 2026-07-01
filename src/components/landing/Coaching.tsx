@@ -98,9 +98,9 @@ export function Coaching() {
         <div className="mx-auto mt-12 max-w-3xl rounded-[2rem] bg-background/70 p-8 text-center shadow-[var(--shadow-soft)] sm:p-10">
           <p className="text-lg leading-relaxed text-foreground/80">
             Muchas veces creemos que nos falta información. Pero la mayoría ya sabe qué debería hacer
-            para sentirse mejor.{" "}
+            para sentirse mejor.{" "} Lo difícil no es saberlo,{" "}
             <span className="font-semibold text-secondary">
-              Lo difícil no es saberlo, sino llevarlo a la práctica y sostenerlo en el tiempo.
+              sino llevarlo a la práctica y sostenerlo en el tiempo.
             </span>
           </p>
           <p className="mt-5 text-base leading-relaxed text-foreground/70">
@@ -108,10 +108,7 @@ export function Coaching() {
             a generar cambios reales y duraderos, trabajando sobre todos los pilares del bienestar,
             tu energía, tus emociones, tus pensamientos, tus relaciones, tus hábitos y tu propósito.
           </p>
-          <p className="mt-5 text-base leading-relaxed text-foreground/70">
-            Trabajamos sobre los distintos pilares del bienestar porque la salud va mucho más allá de
-            la alimentación o el ejercicio.
-          </p>
+     
         </div>
 
         {/* Proceso con cards y flechas orgánicas */}
