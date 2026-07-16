@@ -11,7 +11,7 @@ import type {
 const MERCADO_PAGO_PREFERENCES_URL =
   "https://api.mercadopago.com/checkout/preferences";
 
-/** Ruta de retorno tras el pago (se implementará en el siguiente paso). */
+/** Ruta de retorno tras el pago (Checkout Pro back_urls). */
 const CHECKOUT_RESULT_PATH = "/pago/resultado";
 
 function buildPreferencePayload(siteUrl: string): CreatePreferencePayload {
