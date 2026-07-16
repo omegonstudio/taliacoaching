@@ -29,14 +29,16 @@ export function About() {
             El bienestar no depende de una única acción, sino de la suma de pequeñas decisiones que
             tomamos cada día.
           </blockquote>
-          <img
-            src={aboutImage}
-            alt="Talia Alles, Health Coach, señalando hacia arriba"
-            width={960}
-            height={1280}
-            loading="lazy"
-            className="w-full object-contain"
-          />
+          <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
+            <img
+              src={aboutImage}
+              alt="Talia Alles sonriendo y sosteniendo una manzana"
+              width={960}
+              height={1280}
+              loading="lazy"
+              className="w-full object-cover"
+            />
+          </div>
         </div>
         <div>
           <span className="text-xs font-medium uppercase tracking-[0.2em] text-secondary">
