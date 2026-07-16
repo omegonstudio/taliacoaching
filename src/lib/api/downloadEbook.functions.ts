@@ -10,13 +10,13 @@ const DOWNLOAD_ERROR_MESSAGE = "No pudimos preparar la descarga. Intentá de nue
 export const downloadEbook = createServerFn({ method: "POST" })
   .validator(z.object({ payment_id: z.string().min(1) }))
   .handler(async ({ data }) => {
-    const verified = await verifyPayment(data.payment_id);
-
-    if (verified.status !== "approved") {
-      return new Response(DOWNLOAD_FORBIDDEN_MESSAGE, { status: 403 });
-    }
-
     try {
+      const verified = await verifyPayment(data.payment_id);
+
+      if (verified.status !== "approved") {
+        return new Response(DOWNLOAD_FORBIDDEN_MESSAGE, { status: 403 });
+      }
+
       const pdf = await readEbookPdf();
 
       return new Response(pdf, {
@@ -25,7 +25,15 @@ export const downloadEbook = createServerFn({ method: "POST" })
           "Content-Disposition": 'attachment; filename="ebook.pdf"',
         },
       });
-    } catch {
-      return new Response(DOWNLOAD_ERROR_MESSAGE, { status: 500 });
+    } catch (error) {
+      console.error("downloadEbook error", {
+        paymentId: data.payment_id,
+        error,
+      });
+
+      return new Response(
+        DOWNLOAD_ERROR_MESSAGE,
+        { status: 500 }
+      );
     }
   });
