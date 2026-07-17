@@ -25,7 +25,8 @@ export function Ebook() {
       className="py-24 sm:py-28"
       style={{ background: "#faf7f5" }}
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+       
+       <div className="mx-auto flex max-w-6xl flex-col-reverse lg:grid lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16 gap-12 px-5 ">
         <div className="relative mx-auto w-full max-w-sm">
           <img
             src={ebookCover}
