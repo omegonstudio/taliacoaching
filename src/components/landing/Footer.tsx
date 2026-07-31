@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { SocialIcons } from "./SocialIcons";
 import { WHATSAPP_URL } from "@/lib/site-config";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/logo.png";
 
 
 export function Footer() {
