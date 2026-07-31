@@ -1,6 +1,8 @@
 import { MessageCircle } from "lucide-react";
 import { SocialIcons } from "./SocialIcons";
 import { WHATSAPP_URL } from "@/lib/site-config";
+import logo from "@/assets/logo.webp";
+
 
 export function Footer() {
   return (
@@ -38,7 +40,7 @@ export function Footer() {
             Powered by
           </span>
 
-          <img src="src/assets/logo.webp" alt="Omegon" className="h-8 w-auto" />
+          <img src={logo} alt="Omegon" width={1024} height={1024} className="h-8 w-auto" />
         </a>
 
         <p className="mt-4 text-center text-xs text-muted-foreground">
