@@ -26,8 +26,22 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <div className="border-t border-border/60 py-5">
-        <p className="text-center text-xs text-muted-foreground">
+
+      <div className="border-t border-border/60 py-6">
+        <a
+          href="https://omegon.com.ar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-auto flex w-fit items-center gap-3 opacity-70 transition-opacity hover:opacity-100"
+        >
+          <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            Powered by
+          </span>
+
+          <img src="src/assets/logo.webp" alt="Omegon" className="h-8 w-auto" />
+        </a>
+
+        <p className="mt-4 text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} Talia Alles · Hábitos saludables y sostenibles
         </p>
       </div>
