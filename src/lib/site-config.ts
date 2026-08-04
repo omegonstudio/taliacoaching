@@ -3,9 +3,15 @@
 // Número de WhatsApp en formato internacional sin "+" ni espacios. Ej: 5491112345678
 export const WHATSAPP_NUMBER = "5492914254659";
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hola Talia, me gustaría comenzar mi proceso para construir hábitos sostenibles.",
+  "Hola, Tali! Quiero empezar un proceso de Health Coaching.",
 );
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+
+// Número de WhatsApp en formato internacional sin "+" ni espacios. Ej: 5491112345678
+const WHATSAPP_MESSAGE_DATE = encodeURIComponent(
+  "Hola, Tali! Quiero agendar una reunión.");
+export const WHATSAPP_URL_DATE = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE_DATE}`;
+
 
 /**
  * @deprecated Usar `BuyEbookButton` y Checkout Pro (`startCheckout`). Se mantiene por compatibilidad.

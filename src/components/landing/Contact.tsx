@@ -3,13 +3,9 @@ import { CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { CALENDLY_URL } from "@/lib/site-config";
+import { WHATSAPP_URL_DATE } from "@/lib/site-config";
 import contactImage from "@/assets/acompanamento.png";
 
 
@@ -47,26 +43,14 @@ export function Contact() {
 
             <Dialog open={open} onOpenChange={setOpen}>
               <DialogTrigger asChild>
+                <a href={WHATSAPP_URL_DATE} target="_blank" rel="noopener noreferrer">
                 <Button variant="sage" size="xl" className="mt-8 w-full sm:w-auto">
                   <CalendarDays className="h-5 w-5" />
                   Agendar reunión
                 </Button>
+                </a>
               </DialogTrigger>
-              <DialogContent className="max-w-2xl overflow-hidden p-0">
-                <DialogHeader className="px-6 pt-6">
-                  <DialogTitle>Agendá tu reunión</DialogTitle>
-                  <DialogDescription>
-                    Elegí el día y horario que mejor te quede.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="h-[70vh] w-full px-2 pb-2">
-                  <iframe
-                    src={CALENDLY_URL}
-                    title="Calendario de reuniones de Talia Alles"
-                    className="h-full w-full rounded-xl border-0"
-                  />
-                </div>
-              </DialogContent>
+
             </Dialog>
           </div>
         </div>
