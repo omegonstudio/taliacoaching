@@ -106,7 +106,7 @@ export function Coaching() {
           <p className="mt-5 text-base leading-relaxed text-foreground/70">
             El Health Coaching es un proceso de acompañamiento y transformación personal que te ayuda
             a generar cambios reales y duraderos, trabajando sobre todos los pilares del bienestar,
-            tu energía, tus emociones, tus pensamientos, tus relaciones, tus hábitos y tu propósito.
+            tu energía, emociones, pensamientos, relaciones, hábitos y tu propósito.
           </p>
      
         </div>

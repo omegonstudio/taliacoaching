@@ -40,7 +40,7 @@ export function Ebook() {
 
         <div>
           <span className="text-xs font-medium uppercase tracking-[0.2em] text-secondary">
-            Conseguí mi eBook
+            Conseguí tu eBook
           </span>
           <h2 className="mt-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl">
             El primer paso para transformar tus hábitos
