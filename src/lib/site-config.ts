@@ -3,7 +3,7 @@
 // Número de WhatsApp en formato internacional sin "+" ni espacios. Ej: 5491112345678
 export const WHATSAPP_NUMBER = "5492914254659";
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hola, Tali! Quiero empezar un proceso de Health Coaching.",
+  "Hola, Tali! Quiero empezar mi proceso de Health Coaching.",
 );
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
