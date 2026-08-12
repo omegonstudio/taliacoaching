@@ -22,8 +22,8 @@ export const MERCADO_PAGO_URL = "{LINK_MERCADO_PAGO}";
 export const CALENDLY_URL = "https://calendly.com/taliaalles";
 
 // Redes sociales.
-export const INSTAGRAM_URL = "https://instagram.com/taliaalles";
-export const TIKTOK_URL = "https://tiktok.com/@taliaalles";
+export const INSTAGRAM_URL = "https://instagram.com/tali.healthcoach";
+export const TIKTOK_URL = "https://tiktok.com/@tali.healthcoach";
 
 export const SITE = {
   name: "Talia Alles",
